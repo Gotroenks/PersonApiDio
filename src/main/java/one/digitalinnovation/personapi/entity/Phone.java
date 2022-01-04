@@ -20,9 +20,9 @@ public class Phone {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false) //obrigatório *
+    @Column(nullable = false)
     private PhoneType type;
 
-    @Column(nullable = false) // obrigatório *
+    @Column(nullable = false)
     private String number;
 }
