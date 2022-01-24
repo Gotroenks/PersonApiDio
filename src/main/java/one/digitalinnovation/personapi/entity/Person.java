@@ -24,7 +24,7 @@ public class Person {
     private String firstName;
 
     @Column(nullable = false) // obrigatório *
-    private String lastName;
+    private String lastName; 
 
     @Column(nullable = false, unique = true) // obrigatório * e único
     private String cpf;
