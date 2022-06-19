@@ -6,6 +6,7 @@ import one.digitalinnovation.personapi.service.PersonService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -25,7 +26,7 @@ public class PersonController {
         this.personService = personService;
     }
 
-    @PostMapping
+    @GetMapping
     @ResponseStatus(value = HttpStatus.CREATED)
     public MessageResponseDTO createPerson(@RequestBody @Valid PersonDTO personDTO) {
         return personService.createPerson(personDTO);
